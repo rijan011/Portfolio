@@ -1,0 +1,300 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #fff;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background: url('2.jpeg') no-repeat center center fixed;
+    background-size: cover; /* Ensures the background image covers the entire page */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 15px 20px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 16px;
+    position: relative;
+    display: inline-block;
+    transition: color 0.3s;
+}
+
+header nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background: #f39c12; /* Line color */
+    transition: width 0.3s ease-in-out;
+}
+
+header nav a:hover::after {
+    width: 100%; /* Line grows to full width on hover */
+}
+section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+section p {
+    font-size: 1.1rem;
+    margin: 20px auto;
+    max-width: 700px;
+    line-height: 1.6;
+}
+
+.services, .portfolio {
+    background:black;
+}
+
+.services .service-item, .portfolio .portfolio-item {
+    display: inline-block;
+    margin: 15px;
+    padding: 20px;
+    width: 250px;
+    background: grey;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.services .service-item:hover, .portfolio .portfolio-item:hover {
+    transform: translateY(-10px);
+}
+
+.contact {
+    background-color: black; /* Black background */
+    color: white; /* White text for contrast */
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.contact .contact-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    margin-left: 20px; /* Shift the entire content to the right */
+}
+
+.contact .contact-info {
+    width: 40%;
+    text-align: left;
+    margin-left: 20px; /* Add space to move it right */
+}
+
+.contact .contact-info h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.contact .contact-info p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.contact form {
+    width: 55%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.contact form input,
+.contact form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+}
+
+.contact form button {
+    padding: 15px 30px;
+    border: none;
+    background: #f39c12;
+    color: #fff;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+footer {
+    background: #1a252f;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+}
+.hero {
+    height: 100vh;
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    padding-left: 70px;
+}
+
+.hero .small-text {
+    font-size: 1rem;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.hero .highlight {
+    color: #f28c8c; /* Soft red color for "Rijan" */
+}
+#about {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: black; /* Set background to black */
+    color: white; /* Ensure text is readable on black */
+}
+
+#about .about-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+}
+
+#about .about-photo {
+    margin-right: 20px; /* Add space between the photo and text */
+}
+
+#about .about-photo img {
+    width: 150px; /* Set the size of the image */
+    height: 150px;
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensures the image fills the circle */
+}
+#about p {
+    font-size: 1.1rem;
+    margin: 20px auto;
+    max-width: 700px;
+    line-height: 1;
+    color: #f0f0f0; /* Soft white color for the text */
+}
+.tab-titles {
+    display: flex; /* Enables horizontal layout */
+    justify-content: center; /* Centers items horizontally */
+    gap: 10px; /* Adjusts spacing between items */
+    margin: 10px 0 30px;
+}
+
+.tab-titles p {
+    font-size: 16px; /* Optional: Adjust text size */
+    margin: 0; /* Removes default margin */
+    cursor: pointer; /* Makes it interactive */
+}
+#services {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+#services .service-gallery {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* Create 5 equal-width columns */
+    gap: 20px;
+    justify-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#services .service-box {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 10px; /* Optional: rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: shadow for effect */
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#services .service-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the box fully */
+    transition: opacity 0.3s ease;
+}
+
+#services .service-box .service-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    font-weight: bold;
+    color: white; /* Text color */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease;
+    z-index: 2; /* Ensure the text appears above the image */
+}
+
+#services .service-box:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Deeper shadow on hover */
+}
+
+#services .service-box:hover img {
+    opacity: 0.7; /* Make image slightly transparent on hover */
+}
+
+#services .service-box::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 182, 193, 0.6); /* Light pink tone */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+#services .service-box:hover::after {
+    opacity: 1; /* Show the light pink overlay on hover */
+}
+
+#services .service-box:hover .service-text {
+    opacity: 1; /* Make text visible on hover */
+}
