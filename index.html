@@ -8,7 +8,7 @@
 </head>
 <body>
     <header>
-        <div class="logo">My Portfolio</div>
+        <div class="logo" onclick="location.reload();">RB</div>
         <nav>
             <a href="#about">About</a>
             <a href="#services">Services</a>
@@ -28,49 +28,75 @@
         <h2>About Me</h2>
         <div class="about-content">
             <div class="about-photo">
-                <img src="1.png" alt="My Photo"
+                <img src="1.png" alt="My Photo">
             </div>
             <p>
-                I am a passionate individual with expertise in web development, content creation, and design. 
-                I create solutions that blend functionality with aesthetics.
+                
+Creative and detailed content writer passionate about crafting engaging and SEO-optimized blog posts. I learn SEO and content writing from orka social. I'm also very good at storytelling and engagingly delivering content. I'm familiar with the topics of war press data analysis and video editing, with a strong understanding of trending topics and audience preferences. I want to express my communication and data-delivering ideas to growing channels or businesses.
             </p>
         </div>
-    <dev class="tab-titles">
-        <p class="tab-titles">skill</p>
-        <p class="tab-titles">skill</p>
-        <p class="tab-titles{">skill</p>
-    </dev>
+
     </section>
     <section id="services" class="services">
         <h2>My Services</h2>
         <div class="service-gallery">
+            <!-- Service Box 1 -->
             <div class="service-box">
-                <img src="https://via.placeholder.com/300" alt="Service 1">
-                <div class="service-text">Service 1</div> <!-- Text inside the box -->
+                <img src="https://media.licdn.com/dms/image/v2/C5612AQGcKM_LOXp1dA/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1645483251783?e=2147483647&v=beta&t=Y9c1s29sXAEoYQvRSsFfWjTgPeIF9tbthlCARf6zH4E" alt="Service 1">
+                <div class="service-text">
+                    <h3>SEO Content Writing</h3>
+                </div>
             </div>
+            <!-- Service Box 2 -->
             <div class="service-box">
-                <img src="https://via.placeholder.com/300" alt="Service 2">
-                <div class="service-text">Service 2</div> <!-- Text inside the box -->
+                <img src="https://www.neweggbusiness.com/smartbuyer/wp-content/uploads/Laptop-Creative-Pro.jpg" alt="Service 2">
+                <div class="service-text">
+                    <h3>Creative Writing</h3>
+                </div>
             </div>
+            <!-- Service Box 3 -->
             <div class="service-box">
-                <img src="https://via.placeholder.com/300" alt="Service 3">
-                <div class="service-text">Service 3</div> <!-- Text inside the box -->
+                <img src="https://www.interodigital.com/wp-content/uploads/2024/04/the-evolution-of-digital-marketing-scaled.jpeg" alt="Service 3">
+                <div class="service-text">
+                    <h3>Digital Marketing</h3>
+                </div>
             </div>
+            <!-- Service Box 4 -->
             <div class="service-box">
-                <img src="https://via.placeholder.com/300" alt="Service 4">
-                <div class="service-text">Service 4</div> <!-- Text inside the box -->
-            </div>
-            <div class="service-box">
-                <img src="https://via.placeholder.com/300" alt="Service 5">
-                <div class="service-text">Service 5</div> <!-- Text inside the box -->
+                <img src="https://www.creativewritingedu.org/wp-content/uploads/2022/11/what-is-content-writing.jpg" alt="Service 4">
+                <div class="service-text">
+                    <h3>Content Writing</h3>
+                </div>
             </div>
         </div>
+        
     </section>
-    <section id="portfolio" class="portfolio">
-        <h2>My Portfolio</h2>
-        <div class="portfolio-item">Project 1</div>
-        <div class="portfolio-item">Project 2</div>
-        <div class="portfolio-item">Project 3</div>
+</section>
+    <section id="portfolio">
+        <h2>My Writing Portfolio</h2>
+        <div class="portfolio-container">
+            <div class="portfolio-item">
+                <h3> Digital Marketing</h3>
+                <p>This article is tailored for a wide range of readers, including:
+                    •	Business owners seeking to expand their online presence.
+                    •	Digital marketers looking to refine their strategies.
+                    •	Beginners exploring the world of digital marketing.
+                    •	Professionals aiming to stay updated on emerging trends.
+                </p>
+                <a href="1.pdf" target="_blank">Read Article</a>
+            </div> 
+             <div class="portfolio-item">
+                <h3>Tips</h3>
+                <p>Pro tips</p>
+                <a href="3.pdf" target="_blank">View Content</a>
+            </div>
+            <div class="portfolio-item">
+                <h3>SEO Project</h3>
+                <p>How To make SEO friendly content</p>
+                <a href="2.pdf" target="_blank">View Content</a>
+            </div>
+          
+        </div>
     </section>
 
     <section id="contact" class="contact">
@@ -78,59 +104,22 @@
         <div class="contact-content">
             <div class="contact-info">
                 <h3>My Information</h3>
-                <p><strong>Email:</strong> your-email@example.com</p>
-                <p><strong>Phone:</strong> (123) 456-7890</p>
+                <p><strong>Email:</strong>rijanbhattarai03@gmail.com</p>
+                <p><strong>Phone:</strong> +977 9842621833</p>
                 <p><strong>Location:</strong> Kathmandu, Nepal</p>
             </div>
-            <form id="contactForm" action="https://formspree.io/f/meooooje" method="POST">
-  <input type="text" name="name" placeholder="Your Name" required>
-  <input type="email" name="email" placeholder="Your Email" required>
-  <textarea name="message" placeholder="Your Message" required></textarea>
-  <button type="submit">Send</button>
-</form>
-
-<!-- Placeholder for the success message -->
-<p id="formResponse" style="display:none; color:green;">Your message has been sent successfully!</p>
-<p id="formError" style="display:none; color:red;">There was an error. Please try again.</p>
-
-<script>
-  const form = document.getElementById('contactForm');
-  const successMessage = document.getElementById('formResponse');
-  const errorMessage = document.getElementById('formError');
-
-  form.addEventListener('submit', async function (event) {
-    event.preventDefault(); // Prevent default form submission behavior
-
-    const formData = new FormData(form);
-    const formObject = Object.fromEntries(formData.entries()); // Convert to JSON object
-
-    try {
-      const response = await fetch(form.action, {
-        method: form.method,
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formObject),
-      });
-
-      if (response.ok) {
-        successMessage.style.display = 'block';
-        errorMessage.style.display = 'none';
-        form.reset(); // Clear the form
-      } else {
-        throw new Error('Failed to submit form');
-      }
-    } catch (error) {
-      console.error(error);
-      errorMessage.style.display = 'block';
-      successMessage.style.display = 'none';
-    }
-  });
-</script>
-            
+            <form action="https://formspree.io/f/meooooje" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
         </div>
     </section>
 
     <footer>
         &copy; 2024 My Portfolio. All rights reserved.
     </footer>
+    
 </body>
 </html>
