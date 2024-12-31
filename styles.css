@@ -94,6 +94,53 @@ header nav a:hover {
 .hero .highlight {
     color: pink;
 }
+/* Hero Box (Top-Right) */
+.hero-box {
+    position: absolute;
+    top: 80px; /* Increased from 20px to move the box down */
+    right: 20px; /* Keeps it aligned to the right */
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px; /* Adjust width as needed */
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    z-index: 100; /* Above other elements */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-box:hover {
+    transform: translateY(-5px); /* Slight lift effect */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6); /* Enhanced shadow on hover */
+}
+
+.hero-box h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.hero-box p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.hero-box .btn {
+    display: inline-block;
+    padding: 10px 15px;
+    color: #fff;
+    background-color: #f39c12;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.hero-box .btn:hover {
+    background-color: #e67e22;
+    transform: scale(1.05);
+}
 
 /* About Section */
 #about {
