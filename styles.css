@@ -384,107 +384,65 @@ footer {
     color: #fff;
 }
 
-/* Media Queries for responsiveness */
-@media (max-width: 1200px) {
-    header .logo {
-        font-size: 20px;
-    }
-
-    header nav a {
-        font-size: 14px;
-    }
-
-    .hero h1 {
-        font-size: 3rem;
-    }
-
-    #services .service-gallery {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    #portfolio .portfolio-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 600px) {
+    /* Header */
     header {
-        padding: 10px;
         flex-direction: column;
         text-align: center;
     }
 
     header nav {
-        flex-direction: column;
-        margin-top: 10px;
+        display: none; /* Hide nav on small screens (can add hamburger menu later) */
     }
 
-    header nav a {
-        margin: 5px 0;
-        font-size: 14px;
-    }
-
-    .hero {
-        padding: 20px;
-        text-align: center;
-    }
-
-    .hero h1 {
-        font-size: 2.5rem;
-        margin-bottom: 15px;
-    }
-
-    .hero .small-text {
-        font-size: 0.9rem;
-    }
-
-    .service-gallery {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    }
-
-    .service-box {
-        margin: 10px auto;
-    }
-
-    #portfolio .portfolio-container {
-        grid-template-columns: 1fr;
-    }
-
-    .contact .contact-content {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-    }
-
-    .contact .contact-info, .contact form {
-        width: 100%;
-        text-align: center;
-    }
-
-    footer {
-        padding: 15px;
-        font-size: 0.9rem;
-    }
-}
-
-@media only screen and (max-width: 500px) {
     header .logo {
-        font-size: 18px;
+        font-size: 16px;
     }
 
-    header nav a {
-        font-size: 12px;
+    /* Hero Section */
+    .hero {
+        padding: 10px;
+        text-align: center;
     }
 
     .hero h1 {
         font-size: 2rem;
+        margin-bottom: 10px;
     }
 
     .hero .small-text {
         font-size: 0.8rem;
     }
 
-    #services .service-gallery {
+    /* Hero Box */
+    .hero-box {
+        width: 90%; /* Reduce width for mobile */
+        padding: 15px;
+        top: 150px; /* Adjust position */
+        right: 5%;
+    }
+
+    /* About Section */
+    #about .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #about .about-photo {
+        margin: 0 auto 15px;
+    }
+
+    #about .about-photo img {
+        width: 150px;
+        height: 150px;
+    }
+
+    #about p {
+        font-size: 1rem;
+    }
+
+    /* Services Section */
+    .service-gallery {
         grid-template-columns: 1fr;
     }
 
@@ -492,22 +450,29 @@ footer {
         margin: 10px 0;
     }
 
-    #about .about-content {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    #about .about-photo {
-        margin: 0 auto 20px;
-    }
-
-    #portfolio .portfolio-container {
+    /* Portfolio Section */
+    .portfolio-container {
         grid-template-columns: 1fr;
     }
 
     .portfolio-item {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    /* Contact Section */
+    .contact .contact-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact .contact-info {
         width: 100%;
-        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .contact form {
+        width: 90%;
     }
 
     .contact form input,
@@ -517,12 +482,14 @@ footer {
     }
 
     .contact form button {
-        padding: 10px 20px;
+        padding: 10px 15px;
         font-size: 1rem;
     }
 
+    /* Footer */
     footer {
         font-size: 0.8rem;
+        padding: 10px;
     }
 }
 /* Tooltip Visibility Adjustment */
@@ -554,4 +521,66 @@ header .logo:hover {
 
 header nav a:hover::after {
     background: #ffb84d;
+}
+
+#videos {
+    padding: 50px;
+    background-color: black;
+    text-align: center;
+    color: white;
+}
+/* Videos Section */
+.videos-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+.videos-section h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: white;
+}
+
+.video-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center-align videos in a row */
+    gap: 20px;
+}
+
+.video-item {
+    width: 300px; /* Narrower width */
+    height: 500px; /* Increased height for vertical appearance */
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    background: black;
+    position: relative;
+}
+
+.video-item:hover {
+    transform: scale(1.05); /* Slight enlargement on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* Video Element */
+.video-item video {
+    width: 100%; /* Fill the box width */
+    height: 100%; /* Fill the box height */
+    object-fit: cover;
+    pointer-events: none; /* Prevent interaction unless hovered */
+}
+
+/* Play video and unmute only on hover */
+.video-item:hover video {
+    pointer-events: auto; /* Enable interaction */
+    autoplay: true;
+    controls: false;
 }
