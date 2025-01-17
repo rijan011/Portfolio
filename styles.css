@@ -584,3 +584,51 @@ header nav a:hover::after {
     autoplay: true;
     controls: false;
 }
+/* Center the icons on the page */
+.social-icons {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust for exact centering */
+    display: flex;
+    gap: 10px; /* Spacing between icons */
+}
+
+/* Style the icons */
+.social-icons a {
+    text-decoration: none;
+    width: 35px; /* Icon size */
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: white;
+    background-color: #555;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Add hover effects */
+.social-icons a:hover {
+    transform: scale(1.1);
+}
+.social-icons .facebook:hover {
+    background-color: #3b5998;
+}
+.social-icons .youtube:hover {
+    background-color: #ff0000;
+}
+.social-icons .instagram:hover {
+    background-color: #c13584;
+}
+.social-icons .twitter:hover {
+    background-color: #1da1f2;
+}
+.social-icons .linkedin:hover {
+    background-color:  #0077B5;
+}
+
+/* Adjust the font size of the icons */
+.social-icons a i {
+    font-size: 16px;
+}
