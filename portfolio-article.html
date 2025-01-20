@@ -176,22 +176,45 @@ footer {
     font-size: 14px;
 }
 
-/* Make content responsive */
-@media (max-width: 768px) {
-    body {
-        padding: 10px;
-    }
-    .content {
-        padding: 80px 10px 10px; /* Adjust padding for smaller screens */
-        width: 100%;
-    }
-    header nav {
+
+@media only screen and (max-width: 600px) {
+    /* Header */
+    header {
         flex-direction: column;
+        text-align: center;
     }
-    header nav a {
-        margin: 10px 0;
+
+    header nav {
+        display: none; /* Hide nav on small screens (can add hamburger menu later) */
     }
-}
+
+    header .logo {
+        font-size: 16px;
+    }
+
+    /* Hero Section */
+    .hero {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+
+    .hero .small-text {
+        font-size: 0.8rem;
+    }
+
+    /* Hero Box */
+    .hero-box {
+        width: 90%; /* Reduce width for mobile */
+        padding: 15px;
+        top: 150px; /* Adjust position */
+        right: 5%;
+    }
+
 /* Footer Styles */
 footer {
     color: white;
