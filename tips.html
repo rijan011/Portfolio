@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="r.png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <title>Digital Marketing</title>
+    <style>
+      
+        h1, h2 {
+            font-family: 'PT serif', serif ;
+        }
+        
+        p {
+            font-family: 'PT Serif', serif;
+            font-size: 16px;
+        }
+        
+        p small {
+            font-size: 16px;
+        }
+/* Global reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: white;
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: black;
+    height: 100vh;
+    width: 100vw;
+    padding: 0;
+    overflow: auto; /* Allow scrolling */
+    position: relative;
+}
+
+/* Header Styles */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 15px 20px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header .logo:hover {
+    color: #f39c12; /* Hover effect color */
+}
+
+header nav {
+    display: flex;
+}
+
+header nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 16px;
+    position: relative;
+    display: inline-block;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+header nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background: #f39c12;
+    transition: width 0.3s ease-in-out;
+}
+
+header nav a:hover::after {
+    width: 100%;
+}
+
+header nav a:hover {
+    transform: scale(1.1); /* Slight scaling effect on hover */
+}
+
+/* Content styles */
+.content {
+    max-width: 800px;
+    padding: 80px 20px 20px; /* Padding to prevent overlap with fixed header */
+    text-align: left;
+    margin: 0 auto;
+    position: relative;
+    top: 25%; /* Adjust content position after cutting 25% top */
+}
+
+/* Center image styles */
+.content img {
+    display: block;
+    margin: 20px auto; /* Centers the image horizontally and adds margin for spacing */
+    max-width: 100%; /* Makes sure the image is responsive and scales with the screen */
+    height: auto; /* Ensures the aspect ratio is preserved */
+}
+
+/* Social icons styles */
+.social-icons a:hover {
+    transform: scale(1.1);
+}
+.social-icons .facebook:hover {
+    background-color: #3b5998;
+}
+.social-icons .youtube:hover {
+    background-color: #ff0000;
+}
+.social-icons .instagram:hover {
+    background-color: #c13584;
+}
+.social-icons .twitter:hover {
+    background-color: #1da1f2;
+}
+.social-icons .linkedin:hover {
+    background-color:  #0077B5;
+}
+
+.social-icons a i {
+    font-size: 16px;
+}
+
+.social-icons {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 10px; /* Spacing between icons */
+}
+
+/* Style the icons */
+.social-icons a {
+    text-decoration: none;
+    width: 35px; /* Icon size */
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: white;
+    background-color: #555;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Footer Styles */
+footer {
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    font-size: 14px;
+}
+
+/* Make content responsive */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    .content {
+        padding: 80px 10px 10px; /* Adjust padding for smaller screens */
+        width: 100%;
+    }
+    header nav {
+        flex-direction: column;
+    }
+    header nav a {
+        margin: 10px 0;
+    }
+}
+/* Footer Styles */
+footer {
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed; /* Position it at the bottom of the page */
+    bottom: 0; /* Place the footer at the bottom */
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    font-size: 14px;
+}
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="index.html" style="color: inherit; text-decoration: none;">RB</a>
+        </div>
+    <div class="social-icons">
+        <a href="https://www.facebook.com/rijan000" target="_blank" class="icon facebook">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://www.youtube.com/@rijan-0" target="_blank" class="icon youtube">
+            <i class="fab fa-youtube"></i>
+        </a>
+        <a href="https://www.instagram.com/jharanamallathakuri4/" target="_blank" class="icon instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/rijan-bhattarai-24143330a/" target="_blank" class="icon linkedin">
+            <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://x.com/rijan0" target="_blank" class="icon twitter">
+            <i class="fab fa-twitter"></i>
+        </a>
+    </div>
+        <nav>
+            <a href="index.html#about">About</a>
+            <a href="index.html#services">Services</a>
+            <a href="index.html#portfolio">Portfolio</a>
+            <a href="index.html#videos">Videos</a> <!-- Link to the Video section -->
+            <a href="index.html#contact">Contact</a>
+        </nav>
+    </header>
+    <div class="content">
+        <h1 class="article-title">What Factors Influence SEO
+            and Are Most Important?</h1>
+        <p class="article-intro">As the dominant search engine, Google processes over 3.5 billion
+            searches daily. Consequently, achieving a higher ranking on
+            Google search results can significantly boost traffic to your website.<br><br>
+            Therefore, it is crucial to closely monitor Google’s ranking factors.
+            These factors are continually evolving in tandem with Google’s
+            search algorithms. By understanding these factors, you can
+            optimize your content to deliver the most relevant results,
+            enhancing the user experience.<br><br><br>
+            From page load time to website security, here are the most
+            important ranking factors you need to know:<br><br>
+            <img class="article-image" src="https://profiletree.com/wp-content/uploads/2019/11/How-to-Check-and-Improve-Your-Google-Ranking.jpg" alt="Image description"><br><br>
+            • Page speed, which measures the time it takes for a web page
+            to load, significantly impacts your site’s ranking in search
+            results. Regularly monitor your site’s performance using speed
+            analysis tools like Google’s PageSpeed Insights and the
+            Pingdom Speed Test to gain insights into its efficiency.<br><br>
+            • Mobile-friendliness is crucial for a website’s success. A
+            responsive design ensures that website elements adapt
+            seamlessly to various screen sizes, offering an optimal user 
+            experience on different devices. Consequently, pages from
+            responsive and mobile-friendly sites tend to rank higher in
+            search engine results. To assess the usability of your site,
+            consider using Google’s Mobile-Friendly Test.<br><br>
+            • High-quality content is crucial for Google’s ranking algorithm.
+            Provide relevant and factual information to answer specific
+            queries. Google evaluates content length, structure, relevant
+            keywords, and overall information quality. Always create
+            unique and original content to attract more visitors and
+            enhance your site’s visibility.<br><br>
+            • Backlinks, also known as inbound links, are links to your
+            website placed on other sites. They serve as an indicator of
+            your site’s authority. When a website includes your link in its
+            content, it marks your site as a relevant source. Pages with
+            high-quality backlinks from credible sites can rank higher on
+            search engine results pages.<br><br>
+            • User experience is a crucial factor for Google. It measures
+            user experience through various signals, such as bounce rate
+            and dwell time. When visitors visit a site and leave quickly,
+            Google interprets it as irrelevant. Conversely, if visitors stay on
+            the site for an extended period, it indicates that the site offers
+            valuable information.<br><br>
+            • Site security encompasses all measures to safeguard a
+            website and its visitors against cyberattacks. Consequently,
+            Google prioritizes websites secured by HTTPS. To facilitate
+            your website’s loading through this secure protocol, you’ll 
+            require an SSL certificate. Websites lacking SSL are flagged
+            as insecure, which can discourage visitors. If you haven’t
+            obtained one yet, you can acquire a free SSL certificate from
+            Hostinger.</p><br><br>
+        
+        <h2 class="article-subtitle">How Does SEO Work?</h2>
+        <p class="article-text">Google and other search engines work to collect, organize and
+            display relevant information to answer user queries. To do that,
+            they go through three primary processes, including:<br><br> <img class="article-image" src="https://mikekhorev.com/wp-content/uploads/2020/10/Google_Ranking_Factors.png" alt="Image description"><br><br>
+            Crawling, indexing, and ranking are the three main steps in search
+            engine optimization (SEO).<br><br>
+            1. Crawling:   Web crawlers, also known as spiderbots or simply
+            bots, are a team of software programs that search the web to find
+            updated content. They help discover and collect information needed
+            to index a page.<br><br>
+            2. Indexing:   Once web crawlers find information on a site, such
+            as keywords and fresh content, they add the web page to the
+            search index. This process involves storing and organizing the web
+            pages collected by search engines. To help search engines find
+            your content, submit your website to their index. When users search
+            for relevant information, the search engine retrieves the indexed
+            website.<br><br>
+         3.  Ranking:   Web pages in the search index are displayed on the
+            search results in order of relevance, from most to least. SEO aims
+            to improve your web presence by making your site more appealing
+            to search engines. In other words, it works to determine how well
+            your site progresses through these steps, from crawling to ranking.
+            For example, well-structured internal links on your pages make it
+            easier for web crawlers to navigate from one page to another. This
+            allows them to explore your website in depth and index more of
+            your content.<br><br>
+            On the other hand, if you don’t want certain pages to be crawled,
+            you can use the robot.txt file to block bots.
+            Additionally, search engine algorithms consider various ranking
+            factors, such as relevant keywords, backlink quality, and content
+            freshness.<br><br><br><br>
+            Therefore, creating SEO-friendly content that incorporates these
+            factors can significantly enhance your search results.</p>
+            <br><br>
+
+    
+       
+    
+
+    </div>
+    </body>
+    </html>
