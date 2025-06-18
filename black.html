@@ -203,10 +203,11 @@ footer {
     }
 
     /* Hero Section */
-    .hero {
-        padding: 10px;
-        text-align: center;
-    }
+    .hero > div {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    gap: 20px; /* Optional: space between boxes */
+}
 
     .hero h1 {
         font-size: 2rem;
