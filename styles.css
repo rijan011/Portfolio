@@ -70,45 +70,48 @@ header nav a:hover {
     transform: scale(1.1); /* Slight scaling effect on hover */
 }
 
-/* Hero Section */
+/* Main hero container layout */
 .hero {
+    position: relative;
     height: 100vh;
+    background: #111;
+    color: white;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+}
+
+/* Left-side intro text vertically centered */
+.intro-text {
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    text-align: left;
-    padding-left: 70px;
+    padding-left: 40px;
 }
 
-.hero .small-text {
-    font-size: 1rem;
-    color: #fff;
-    margin-bottom: 10px;
-}
-
-.hero h1 {
+.intro-text h1 {
     font-size: 4rem;
     margin-bottom: 20px;
 }
 
-.hero .highlight {
+.intro-text .highlight {
     color: pink;
 }
-/* Container Styles */
-.hero {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background: #111; /* Background color */
-    color: white;
-    padding: 40px;
+
+.small-text {
+    font-size: 1rem;
+    color: #ccc;
+    margin-bottom: 10px;
 }
 
-.hero-content {
+/* Hero boxes stacked on top right */
+.hero-boxes {
+    position: absolute;
+    top: 40px;
+    right: 40px;
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 20px;
 }
 
@@ -118,14 +121,12 @@ header nav a:hover {
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 10px;
     padding: 20px;
-    width: 300px;
+    width: 280px;
     text-align: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin-bottom: 20px; /* ✅ Adds spacing between boxes */
 }
 
-/* Button */
 .hero-box .btn {
     display: inline-block;
     padding: 10px 15px;
@@ -140,13 +141,6 @@ header nav a:hover {
 .hero-box .btn:hover {
     background-color: #e67e22;
     transform: scale(1.05);
-}
-
-/* Text Styling */
-.small-text {
-    font-size: 0.9rem;
-    color: #ccc;
-    margin-top: 10px;
 }
 
 h1 {
