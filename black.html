@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="r.png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <title>Digital Marketing</title>
+    <style>
+        .hero-box {
+            position: absolute;
+            top: 15%;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7); /* Optional, for a dark background */
+            color: white; /* Optional, for text color */
+            border-radius: 10px; /* Optional, for rounded corners */
+        }
+        h1, h2 {
+            font-family: 'PT serif', serif ;
+        }
+        
+        p {
+            font-family: 'PT Serif', serif;
+            font-size: 16px;
+        }
+        
+        p small {
+            font-size: 16px;
+        }
+/* Global reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: white;
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: black;
+    height: 100vh;
+    width: 100vw;
+    padding: 0;
+    overflow: auto; /* Allow scrolling */
+    position: relative;
+}
+
+/* Header Styles */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 15px 20px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header .logo:hover {
+    color: #f39c12; /* Hover effect color */
+}
+
+header nav {
+    display: flex;
+}
+
+header nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 16px;
+    position: relative;
+    display: inline-block;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+header nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background: #f39c12;
+    transition: width 0.3s ease-in-out;
+}
+
+header nav a:hover::after {
+    width: 100%;
+}
+
+header nav a:hover {
+    transform: scale(1.1); /* Slight scaling effect on hover */
+}
+
+/* Content styles */
+.content {
+    max-width: 800px;
+    padding: 80px 20px 20px; /* Padding to prevent overlap with fixed header */
+    text-align: left;
+    margin: 0 auto;
+    position: relative;
+    top: 25%; /* Adjust content position after cutting 25% top */
+}
+
+/* Center image styles */
+.content img {
+    display: block;
+    margin: 20px auto; /* Centers the image horizontally and adds margin for spacing */
+    max-width: 100%; /* Makes sure the image is responsive and scales with the screen */
+    height: auto; /* Ensures the aspect ratio is preserved */
+}
+
+/* Social icons styles */
+.social-icons a:hover {
+    transform: scale(1.1);
+}
+.social-icons .facebook:hover {
+    background-color: #3b5998;
+}
+.social-icons .youtube:hover {
+    background-color: #ff0000;
+}
+.social-icons .instagram:hover {
+    background-color: #c13584;
+}
+.social-icons .twitter:hover {
+    background-color: #1da1f2;
+}
+.social-icons .linkedin:hover {
+    background-color:  #0077B5;
+}
+
+.social-icons a i {
+    font-size: 16px;
+}
+
+.social-icons {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 10px; /* Spacing between icons */
+}
+
+/* Style the icons */
+.social-icons a {
+    text-decoration: none;
+    width: 35px; /* Icon size */
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: white;
+    background-color: #555;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Footer Styles */
+footer {
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    font-size: 14px;
+}
+
+
+@media only screen and (max-width: 600px) {
+    /* Header */
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header nav {
+        display: none; /* Hide nav on small screens (can add hamburger menu later) */
+    }
+
+    header .logo {
+        font-size: 16px;
+    }
+
+    /* Hero Section */
+    .hero > div {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    gap: 20px; /* Optional: space between boxes */
+}
+
+    .hero h1 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+
+    .hero .small-text {
+        font-size: 0.8rem;
+    }
+
+    /* Hero Box */
+    .hero-box {
+        width: 90%; /* Reduce width for mobile */
+        padding: 15px;
+        top: 150px; /* Adjust position */
+        right: 5%;
+    }
+
+}
+/* Footer Styles */
+footer {
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed; /* Position it at the bottom of the page */
+    bottom: 0; /* Place the footer at the bottom */
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    font-size: 14px;
+}
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="index.html" style="color: inherit; text-decoration: none;">RB</a>
+        </div>
+    <div class="social-icons">
+        <a href="https://www.facebook.com/rijan000" target="_blank" class="icon facebook">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://www.youtube.com/@rijan-0" target="_blank" class="icon youtube">
+            <i class="fab fa-youtube"></i>
+        </a>
+        <a href="https://www.instagram.com/jharanamallathakuri4/" target="_blank" class="icon instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/rijan-bhattarai-24143330a/" target="_blank" class="icon linkedin">
+            <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://x.com/rijan0" target="_blank" class="icon twitter">
+            <i class="fab fa-twitter"></i>
+        </a>
+    </div>
+        <nav>
+            <a href="index.html#about">About</a>
+            <a href="index.html#services">Services</a>
+            <a href="index.html#portfolio">Portfolio</a>
+            <a href="index.html#videos">Videos</a> <!-- Link to the Video section -->
+            <a href="index.html#contact">Contact</a>
+        </nav>
+    </header>
+    <div class="content">
+    <h1 class="article-title">Nepal’s Royal Mystery: A Prince’s Love, A Nation’s Loss
+        (1945-2001)</h1><br><br>
+        <img class="article-image" src="https://annapurnaexpress.prixacdn.net/media/albums/r_20200601192128_20210602162102_hHgEFdlY9X.jpg" alt="Image description"><br><br>
+    <p class="article-intro">The Dark Day of Nepal, a political mystery linked to King Brendra, the
+        last king of Nepal, is a subject of intrigue. In 2001, tensions flared
+        between 29-year-old Crown Prince Dipendra of Nepal and his parents,
+        Queen Aiswarya and King Birendra. The root cause of the family
+        conflict lay in Queen Aiswarya’s disapproval of the woman Dipendra
+        had chosen to marry, Devyani Rana. The queen vehemently opposed
+        the young woman and even threatened Dipendra with disinheritance if
+        he disregarded her wishes.<br><br>
+        On a summer’s night in Nepal, a drunken Crown Prince, Dipendra Bir
+        Bikram Shah ambushed a royal family gathering, opening fire and killing
+        nine people, including his father, the King. Tragically, he later turned the
+        gun on himself.<br><br>
+        
+        It’s perhaps one of the most dramatic royal events to have ever occurred
+        in our lifetimes, but it doesn’t involve the British monarchy.
+        In a single night, Nepal's royal family was almost entirely wiped out.
+        Their killer lay in a hospital bed in a coma, having been proclaimed
+        King the moment his father died.<br><br>
+        The massacre allegedly occurred after an argument between Dipendra
+        and his parents, who disapproved of his plans to marry the local
+        aristocrat Devyani Rana.<br><br>
+        It is believed Dipendra was threatened with being disinherited if he
+        continued with the match and this may have been what drove him to
+        murder on June 1, 2001.<br><br>
+        While we may never know his real intentions, Dipendra wasn't a ruler
+        for long. Hours after the massacre, he was declared brain dead and
+        his uncle Gyanendra became Nepal's third King in three days.<br><br>
+        The events that unfolded shocked the nation, leading to a grieving
+        public taking to the streets and rioting for several days. Many were
+        astounded that the beloved prince could be responsible for such
+        heinous violence. These events marked the beginning of a tumultuous
+        period in Nepal, which culminated in the abolition of the country’s 
+        monarchy seven years after the massacre. Fueled by public
+        resentment towards King Gyanendra, fiercely republican Maoist
+        politicians capitalized on the sentiment and secured a majority in the
+        constitutional assembly. The country that had once revered its royals
+        as living Hindu gods abruptly ordered the surviving family members to
+        vacate the palace within 15 days.<br><br>
+        The public’s divorce-related thoughts lead this case to a mystery and
+        provide a new perspective on the prince’s death.</p><br><br><br><br>
+    
+    <h2 class="article-subtitle">The Tragic Story of Crown Prince Dipendra: Love, Conflict, and the Royal Massacre</h2><br><br>
+    <p class="article-text">Crown Prince Dipendra, the eldest son
+        of King Birendra and Queen Aishwarya,
+        was cherished by the Nepali people,
+        who affectionately called him Dippy.
+        But according to Lieutenant General
+        Vivek Kumar Shah, an aide-de-camp at
+        the royal palace for 26 years who
+        knew the Crown Prince since
+        childhood, there was another side to
+        him.<br><br>
+        <img class="article-image" src="https://media.nepaltrekkingplanner.com/uploads/media/king_one.jpg" alt="Image description"><br><br>
+        “From the beginning, he likely didn’t
+        receive the love he deserved as a
+        child,” he shared with The World on
+        the 10th anniversary of the massacre.
+        Prince Dipendra, educated at the esteemed Eton College, a British
+        institution that nurtures future kings and prime ministers, reportedly met
+        his beloved, Ms. Rana, who was also studying in England.
+        Ms. Rana, the daughter of a prominent Nepalese politician and a
+        descendant of an Indian maharajah, seemed like the ideal match for a
+        prince.<br><br>
+        However, Queen Aishwarya was resolute in her desire to break up the
+        relationship and insisted that her son marry a distant relative of the
+        House of Shah.<br><br>
+        Ms. Rana’s family was also skeptical. While the marriage would have
+        elevated her to the position of future queen of Nepal, her mother
+        cautioned her that she would have to adapt to a significantly less
+        lavish lifestyle.<br><br>
+        <img class="article-image" src="https://media.gettyimages.com/id/1310796/photo/in-this-file-photo-dated-april-26-nepalese-crown-prince-dipendra-bir-bikram-shah-dev-left-talks.jpg?s=612x612&w=gi&k=20&c=XNDfWRmgs9G09419ziZPQ-_ZYCULN6navYiQrb-ozto=" alt="Image description"><br><br>
+        “Devyani had grown accustomed to extreme comfort and wealth,” the
+        Nepali Times reported after the massacre.
+        “Her mother further emphasized that Nepali royalty was relatively
+        impoverished, and she had to seriously consider whether her daughter
+        could survive in a poor household.”<br><br>
+        Despite the challenges, Dipendra and Devyani continued to meet in
+        secret for years, while the Crown Prince fervently pleaded with his
+        parents to allow them to wed.<br><br>
+        By 2001, the relationship between the King, Queen, and their first-born
+        son had reached a critical juncture.
+        Newspaper clippings from that time reveal the Prince’s decision to
+        remain unmarried as he approached his thirties, which was
+        jeopardizing his status as the heir to the throne.<br><br>
+        One article dated May 27, 2001, posed the question, “Why is the
+        Crown Prince unmarried at this age? Is his future as the heir to the
+        throne in danger?”
+        “It is high time His Royal Highness got married. The Nepali people
+        eagerly anticipate his wedding, hoping for a grand celebration,” the
+        statement concluded.<br><br>
+        However, no one could have predicted that a dinner held at the
+        palace dining hall just days later would turn into a scene of
+        bloodshed.</p><br><br><br><br>
+
+    <h2 class="article-subtitle">The Royal Catastrophe: What Happened in Narayanhiti
+        Palace?</h2><br><br>
+    <p class="article-text">According to a government report investigating the massacre, Prince
+        Dipendra arrived at a dinner party at the palace intoxicated by whiskey
+        and high on a special kind of cigarette prepared with a combination of
+        hashish and another unidentified black substance.<br><br>
+        After a heated argument with another guest, Dipendra was escorted
+        back to his chambers by his brother Nirajan and a cousin. From his
+        bedroom, he repeatedly called Ms. Rana, claiming that she was
+        mistreating him. However, she informed the authorities that he was 
+        slurring his speech and that the Prince had informed her during their
+        last conversation that he intended to go to bed.<br><br>
+        <img class="article-image" src="https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Fe08d21ac-bc77-4ddc-babd-d2ef268ee262_614x707.jpeg" alt="Image description"><br><br>
+        Instead of emerging from his bedroom in his usual attire, the prince
+        made a shocking appearance, dressed in army fatigues and carrying
+        three guns, including an M16 assault rifle.<br><br>
+        A palace aide, who had spotted him at the top of the stairs, initially
+        dismissed any concerns, considering the prince’s well-known interest in
+        firearms.<br><br>
+        
+        The dinner party in the billiard room was an exclusive event reserved
+        for royals, and as a result, no guards were present to provide security.
+        As the Prince unleashed a barrage of gunfire, palace aides sprang
+        into action, attempting to break through a glass door to rescue the
+        other members of the royal family.<br><br>
+        After killing several individuals in the billiard room, the prince
+        reportedly made his way to the garden in search of his mother.
+        “Please don’t do this. Kill me if you must,” his younger brother,
+        Nirajan, reportedly pleaded while shielding the Queen.
+        Dipendra, the prince, murdered his parents and younger siblings,
+        leaving nine of his relatives dead. After the heinous act, his uncle
+        finally stepped forward and demanded that Dipendra hand over the 
+        gun. However, instead of obeying, Dipendra shot and wounded his
+        uncle before turning the gun on himself.</p><br><br>
+
+  
+    <h2 class="article-subtitle">Nepal’s Royal Mystery: Conspiracies Behind the Palace
+        Massacre.</h2><br><br>
+    <p class="article-conclusion">The timing of the shootings and the immediate shutdown of
+        communications within the palace left reporters scrambling for
+        information in the ensuing hours. Official reports of the incident were
+        scarce, leaving many to wonder who held power.<br><br>
+        The event itself seemed almost impossible, like something out of a
+        Shakespearean tragedy. A family feud over a forbidden romance had
+        escalated into violence and death in a matter of hours.
+        However, as the shock wore off, questions and doubts began to
+        surface. How could the Crown Prince turn against his family in such a
+        violent manner? Were there other forces behind the attack? And why
+        did the investigation into the night only last a week?
+        The rumors were further fueled by the Prime Minister’s early insistence
+        that it was an accident.<br><br>
+        <img class="article-image" src="https://upload.wikimedia.org/wikipedia/commons/8/83/Narayanhiti_Palace_Museum%2C_crop.jpg" alt="Image description"><br><br>
+        “According to the information we have, the incident occurred due to an
+        accidental firing of an automatic weapon, resulting in serious injuries to
+        the King, Queen, Crown Prince, and other members of the royal
+        family,” Prime Minister Girija Prasad Koirala stated.<br><br>
+        The incident was dubbed Nepal’s “Kennedy assassination,” and reports
+        suggested that June 1, 2001, would become one of those events
+        where people would forever be “forever diagramming the scene on
+        pieces of paper, graphing the trajectory of bullets, and speculating
+        about other gunmen.”<br><br>
+        Following the massacre, an article by Baburam Bhattarai, an
+        underground Maoist leader, suggested that the royal murders were the
+        result of a “political conspiracy.”
+        Two directors of Nepal’s largest newspaper, Kantipur, were arrested for
+        treason after the article was published. However, the government later
+        dropped the charges due to intense public backlash.
+        Other conspiracies focused closer to home, with suspicion falling on
+        Prince Dipendra’s unpopular uncle and successor, Gyanendra Bir
+        Bikram Shah Dev, who was not present at the palace on the night of
+        the massacre.<br><br>
+        Wild rumors spread that Gyanendra had colluded with his son, Paras,
+        to carry out the murders and frame Dipendra so that they could seize
+        the throne for themselves.<br><br>
+        Both men vehemently denied any involvement. A former Nepalese
+        foreign minister even made unsubstantiated claims that India and the
+        US were conspiring to eliminate the royal family. However, some view
+        the massacre at the palace as an inevitable consequence of fate.</p><br><br>
+</div>
