@@ -17,47 +17,75 @@ body {
   color: #111;
 }
 
+
+
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 30px;
-  background: #ccc;
-  position: relative;
-  flex-wrap: wrap;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 15px 20px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-nav {
-  display: flex;
-  gap: 20px;
+header .logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
-nav a {
-  text-decoration: none;
-  color: black;
-  font-weight: 500;
+header .logo:hover {
+    color: #f39c12; /* Hover effect color */
 }
 
-
-
-.logo {
-  font-weight: bold;
-  font-size: 24px;
-  cursor: pointer;
+header nav {
+    display: flex;
 }
 
-.logo {
-  font-weight: bold;
-  font-size: 20px;
+header nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 16px;
+    position: relative;
+    display: inline-block;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
-nav a {
-  margin-left: 20px;
-  text-decoration: none;
-  color: black;
-  font-weight: 500;
+header nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background: #f39c12;
+    transition: width 0.3s ease-in-out;
 }
 
+header nav a:hover::after {
+    width: 100%;
+}
+
+header nav a:hover {
+    transform: scale(1.1); /* Slight scaling effect on hover */
+}
+
+/* Responsive Navigation */
+@media (max-width: 768px) {
+    header nav {
+        flex-direction: column;
+    }
+
+    header nav a {
+        margin: 10px 0;
+    }
+}
 .hero {
   position: relative;
   height: 100vh;
@@ -399,7 +427,75 @@ button:hover {
 .portfolio-item button:hover {
   background: #e6b800;
 }
+.learn-more-btn {
+  background: gold;
+  padding: 10px 20px;
+  border-radius: 50px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  transition: 0.3s ease;
+}
 
+.learn-more-btn:hover {
+  transform: scale(1.05);
+  background: #f7c200;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
 
+/* Social icons at top right */
+.social-icons {
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 1001;
+}
 
- 
+/* Style for each icon link */
+.social-icons a {
+    text-decoration: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: #555;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effects */
+.social-icons a:hover {
+    transform: scale(1.1);
+}
+
+.social-icons .facebook:hover {
+    background-color: #3b5998;
+}
+.social-icons .youtube:hover {
+    background-color: #ff0000;
+}
+.social-icons .instagram:hover {
+    background-color: #c13584;
+}
+.social-icons .twitter:hover {
+    background-color: #1da1f2;
+}
+.social-icons .linkedin:hover {
+    background-color: #0077B5;
+}
+ @media (max-width: 768px) {
+    .social-icons {
+        top: 60px;
+        right: 10px;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+}
