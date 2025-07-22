@@ -76,16 +76,7 @@ header nav a:hover {
     transform: scale(1.1); /* Slight scaling effect on hover */
 }
 
-/* Responsive Navigation */
-@media (max-width: 768px) {
-    header nav {
-        flex-direction: column;
-    }
 
-    header nav a {
-        margin: 10px 0;
-    }
-}
 .hero {
   position: relative;
   height: 100vh;
@@ -251,30 +242,7 @@ footer {
   border-radius: 9px;
   cursor: pointer;
 }
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .about-content,
-  .service-grid,
-  .portfolio-grid,
-  footer {
-    flex-direction: column;
-    align-items: center;
-  }
 
-
-  nav {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  nav a {
-    margin: 10px 0;
-  }
-
-  .contact input, .contact textarea {
-    width: 100%;
-  }
-}
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -315,7 +283,7 @@ button:hover {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(20px); }
 }
-@media (max-width: 768px) {
+@ (max-width: 768px) {
   .about-content {
     flex-direction: column;
     text-align: center;
@@ -363,13 +331,8 @@ button:hover {
   transform: translateY(-5px) scale(1.02);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
-@media (max-width: 768px) {
-  .top-right-boxes {
-    position: static;
-    margin: 20px auto;
-    align-items: center;
-  }
-}
+
+
 .portfolio-section {
   background: #e6e6e6;
   padding: 4rem 2rem;
@@ -491,11 +454,133 @@ button:hover {
 .social-icons .linkedin:hover {
     background-color: #0077B5;
 }
- @media (max-width: 768px) {
-    .social-icons {
-        top: 60px;
-        right: 10px;
-        flex-wrap: wrap;
-        justify-content: flex-end;
-    }
+@media (max-width: 768px) {
+
+  /* Header & Navigation */
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .logo {
+    margin-bottom: 10px;
+  }
+
+  header nav {
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  header nav a {
+    width: 100%;
+    text-align: left;
+    padding: 10px;
+  }
+
+  /* Hero Section */
+  .hero {
+    height: auto;
+    padding: 120px 20px 60px;
+  }
+
+  .hero-overlay {
+    padding: 80px 10px 60px;
+    text-align: center;
+  }
+
+  .hero-overlay h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-overlay p {
+    font-size: 1rem;
+  }
+
+  /* Feature Boxes (Top-right) */
+  .top-right-boxes {
+    position: static;
+    flex-direction: column;
+    margin: 20px auto;
+    align-items: center;
+    width: 100%;
+  }
+
+  .feature-box {
+    width: 90%;
+    max-width: 350px;
+  }
+
+  /* About Section */
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .about-image img {
+    width: 150px;
+  }
+
+  .about-text {
+    padding: 0 20px;
+  }
+
+  /* Services Section */
+  .service-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service {
+    width: 90%;
+    max-width: 300px;
+  }
+
+  /* Portfolio Section */
+  .portfolio-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .portfolio-item {
+    width: 90%;
+    max-width: 350px;
+  }
+
+  /* Contact & Footer */
+  footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .info,
+  .contact {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .contact form {
+    align-items: center;
+  }
+
+  .contact input,
+  .contact textarea,
+  .contact button {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  /* Social Icons */
+  .social-icons {
+    flex-wrap: wrap;
+    justify-content: center;
+    top: 70px;
+    position: relative;
+    margin-bottom: 20px;
+  }
+
 }
