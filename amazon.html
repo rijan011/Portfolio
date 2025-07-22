@@ -69,16 +69,35 @@
             margin-top: 10px;
             color: #e67e22;
         }
-        @media (max-width: 768px) {
-            .product {
-                flex-direction: column;
-            }
-        }
-        @media (max-width: 600px) {
-            .container {
-                margin: 20px 10px;
-            }
-        }
+img {
+    max-width: 100%;
+    height: auto;
+}
+      @media (max-width: 768px) {
+    .product {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .product img {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .product-content {
+        padding: 0 10px;
+    }
+
+    .specification {
+        padding: 15px;
+    }
+
+    .specification ul {
+        padding-left: 20px;
+    }
+}
+        
     </style>
 </head>
 <body>
