@@ -283,7 +283,7 @@ button:hover {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(20px); }
 }
-@ (max-width: 768px) {
+@media (max-width: 768px) {
   .about-content {
     flex-direction: column;
     text-align: center;
