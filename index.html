@@ -194,11 +194,18 @@
     location.reload();
   });
 </script>
-  <script>
+ <!-- Place just before </body> -->
+<script>
   function toggleMenu() {
     const nav = document.querySelector('.nav-links');
     nav.classList.toggle('active');
   }
+
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      document.querySelector('.nav-links').classList.remove('active');
+    });
+  });
 </script>
 
 </body>
