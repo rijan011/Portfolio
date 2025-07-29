@@ -634,42 +634,16 @@ header {
   font-size: 15px; /* slightly smaller */
   position: relative;
 }
-
-/* ======= Mobile Styles (Reduced Spacing) ======= */
 @media (max-width: 768px) {
-  .hamburger {
-    display: block;
-    position: absolute;
-    top: 10px;  /* adjusted from 15px */
-    right: 16px;
-  }
-
   .nav-links {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 48px; /* reduced height due to smaller header */
-    right: 0;
-    width: 100%;
-    background-color: #111;
-    text-align: center;
-    padding: 15px 0;
-    transform: translateX(100%);
-    transition: transform 0.3s ease-in-out;
-    z-index: 1001;
+    display: none !important;
   }
 
-  .nav-links.active {
-    transform: translateX(0%);
+  .hamburger {
+    display: none !important;
   }
 
-  .nav-links a {
-    padding: 10px 0;
-    font-size: 17px;
+  body {
+    padding-top: 60px; /* Keep space for the logo in header */
   }
-}
-
-/* Adjust body padding to match new header height */
-body {
-  padding-top: 60px; /* reduced from 70px */
 }
