@@ -636,14 +636,16 @@ header {
 }
 @media (max-width: 768px) {
   .nav-links {
-    display: none !important;
+    display: flex !important;
+    flex-direction: row !important;
+    position: static !important;
+    background: none !important;
+    transform: none !important;
+    width: auto !important;
+    padding: 0 !important;
   }
 
   .hamburger {
     display: none !important;
-  }
-
-  body {
-    padding-top: 60px; /* Keep space for the logo in header */
   }
 }
