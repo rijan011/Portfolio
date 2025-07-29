@@ -588,54 +588,27 @@ button:hover {
   }
 
 }
-/* Base nav styles */
+/* ======= Base Styles ======= */
 .nav-links {
   display: flex;
   gap: 20px;
   transition: all 0.3s ease;
 }
+
 .logo {
   position: relative;
   z-index: 1002;
 }
 
 .hamburger {
+  display: none;
   z-index: 1002;
-}
-/* Responsive styles */
-@media (max-width: 768px) {
-  .hamburger {
-    display: block;
-    font-size: 28px;
-    cursor: pointer;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    z-index: 999;
-  }
-
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    background-color: #fff;
-    width: 100%;
-    text-align: center;
-    padding: 20px 0;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  }
-
-  .nav-links {
-  transform: translateX(100%);
-  transition: transform 0.3s ease-in-out;
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
 }
 
-.nav-links.active {
-  transform: translateX(0%);
-}
-  /* General header styles */
+/* ======= Header Styles ======= */
 header {
   position: fixed;
   top: 0;
@@ -657,11 +630,6 @@ header {
   cursor: pointer;
 }
 
-.nav-links {
-  display: flex;
-  gap: 20px;
-}
-
 .nav-links a {
   color: white;
   text-decoration: none;
@@ -669,37 +637,42 @@ header {
   position: relative;
 }
 
-.hamburger {
-  display: none;
-  font-size: 28px;
-  cursor: pointer;
-  color: white;
-}
-
-/* Responsive */
+/* ======= Mobile Styles ======= */
 @media (max-width: 768px) {
+  .hamburger {
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+  }
+
   .nav-links {
-    display: none;
+    display: flex;
     flex-direction: column;
     position: absolute;
     top: 60px;
     right: 0;
     width: 100%;
     background-color: #111;
+    text-align: center;
     padding: 20px 0;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1001;
   }
 
   .nav-links.active {
-    display: flex;
+    transform: translateX(0%);
   }
 
-  .hamburger {
-    display: block;
+  .nav-links a {
+    padding: 12px 0;
+    font-size: 18px;
+    color: white;
   }
 }
 
-/* Add space below fixed header */
+/* ======= Spacing for fixed header ======= */
 body {
   padding-top: 70px;
-}
 }
