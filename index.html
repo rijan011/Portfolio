@@ -33,7 +33,10 @@
         <i class="fab fa-twitter"></i>
     </a>
 </div>
-<nav>
+  <div class="hamburger" onlick="toggleMenu()">
+    ☰
+  </div>
+<nav class="nav-links">
   <a href="#about">About</a>
   <a href="#services">Service</a>
   <a href="#portfolio">Portfolio</a>
@@ -191,5 +194,12 @@
     location.reload();
   });
 </script>
+  <script>
+  function toggleMenu() {
+    const nav = document.querySelector('.nav-links');
+    nav.classList.toggle('active');
+  }
+</script>
+
 </body>
 </html>
