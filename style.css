@@ -16,6 +16,9 @@ body {
   background: #e6e6e6;
   color: #111;
 }
+body {
+  padding-top: 80px; /* match header height */
+}
 
 
 
@@ -31,6 +34,7 @@ header {
     justify-content: space-between;
     align-items: center;
 }
+
 
 header .logo {
     color: white;
@@ -590,11 +594,14 @@ button:hover {
   gap: 20px;
   transition: all 0.3s ease;
 }
-
-.hamburger {
-  display: none;
+.logo {
+  position: relative;
+  z-index: 1002;
 }
 
+.hamburger {
+  z-index: 1002;
+}
 /* Responsive styles */
 @media (max-width: 768px) {
   .hamburger {
@@ -620,16 +627,23 @@ button:hover {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   }
 
-  .nav-links.active {
-    display: flex;
-  }
+  .nav-links {
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+}
 
+.nav-links.active {
+  transform: translateX(0%);
+}
   header {
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
-    background: white;
+    
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+
     padding: 10px 20px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     z-index: 1000;
