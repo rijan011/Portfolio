@@ -1,215 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="icon" type="image/png" href="logo.png">
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=1024">
-  <title>Rijan Bhattarai</title>
-  <link rel="stylesheet" href="style.css?v=1.2" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday, My Love! ❤️</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Dancing+Script:wght@400;700&family=Crimson+Text:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-<header>
-  
-  <!-- Font Awesome CDN for social media icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<div class="logo" onclick="location.reload()">RB</div>
-<div class="social-icons">
-    <a href="https://www.facebook.com/rijan000" target="_blank" class="facebook">
-        <i class="fab fa-facebook-f"></i>
-    </a>
-    <a href="https://www.youtube.com/@rijan-0" target="_blank" class="youtube">
-        <i class="fab fa-youtube"></i>
-    </a>
-    <a href="https://www.instagram.com/jharanamallathakuri4/" target="_blank" class="instagram">
-        <i class="fab fa-instagram"></i>
-    </a>
-    <a href="https://www.linkedin.com/in/rijan-bhattarai-24143330a/" target="_blank" class="linkedin">
-        <i class="fab fa-linkedin"></i>
-    </a>
-    <a href="https://x.com/rijan0" target="_blank" class="twitter">
-        <i class="fab fa-twitter"></i>
-    </a>
-</div>
- <div class="hamburger" onclick="toggleMenu()">☰</div>
-<nav class="nav-links" id="navLinks">
-  <a href="#about">About</a>
-  <a href="#services">Service</a>
-  <a href="#portfolio">Portfolio</a>
-  <a href="#contact">Contact</a>
-</nav>
+    
+    <!-- Floating Hearts Container -->
+    <div class="floating-hearts-container" id="floatingHeartsContainer"></div>
 
-</header>
-<div class="top-right-boxes">
-  <div class="feature-box">
-    <h3>Dark day of NEPAL</h3>
-    <p>Nepal’s Royal Mystery: A Prince’s Love, A Nation’s Loss (1945–2001)</p>
-    <button onclick="window.location.href='black.html'" class="learn-more-btn">LEARN MORE</button>
-  </div>
-  <div class="feature-box">
-    <h3>AMAZON TOP SELL</h3>
-    <p>One of the Top selling accessories in Amazon Store. For Apple and Android.</p>
-    <button onclick="window.location.href='amazon.html'">View Project</button>
-  </div>
-</div>
-  <section class="hero">
-  <div class="hero-overlay" id="heroText">
-  <h1>Hi, I am Rijan Bhattarai From Nepal</h1>
-  <p>SEO & web designer</p>
-</div>
-<video autoplay muted loop playsinline >
-  
-    <source src="11473-230853026_large.mp4" type="video/mp4" />
-    Your browser does not support the video tag.
-  </video>
-</section>
-
-
-       
-<section id="about" class="about-section">
-    <center><h2 class="section-title">About Me</h2> </center>
-  <div class="about-content">
-    <div class="about-image">
-      <img src="Rijan.jpg" alt="Your Photo">
+    <!-- Music Toggle -->
+    <button id="musicToggle" class="music-toggle">
+        <i class="fas fa-music"></i>
+        <span>Music: OFF</span>
+    </button>
+    <audio id="bgMusic" loop>
+        <source src="love.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <div id="nowPlaying">
+        <span>Now Playing: </span>
+        <span id="songTitle">Can't Help Falling In Love - Elvis Presley</span>
     </div>
-    <div class="about-text">
-     
-      <p>Hello, I’m Rijan Bhattarai, an SEO content writer from Nepal. I gained my SEO knowledge from Orka Socials, a renowned SEO institute in Nepal. Additionally, I interned under the guidance of the esteemed SEO expert, Ram Babu Thapa, who is also known for his SEO-optimized blog posts. My experience encompasses various aspects of SEO, including developing SEO strategies, content creation, and digital marketing. I am well-versed in the best practices of content writing and copywriting, which I employ to captivate the target audience and drive maximum traffic towards SEO-optimized blog posts that yield organic results.<br><br>I specialize in crafting compelling stories and data-driven content that is optimized for search engines. I create specialized storytelling content tailored for the e-commerce niche, ensuring each post aligns with search engine algorithms while engaging the target audience.By employing advanced SEO tools and techniques, I help businesses enhance their visibility, brand recognition, and search engine rankings. I am passionate about crafting high-quality content that not only entices traffic but also converts visitors into loyal customers.</p>
-    </div>
-  </div>
-</section>
 
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <h1 class="title">Happy Birthday, <span class="highlight">My Love</span>!</h1>
+            <p class="subtitle">Every moment with you is a blessing. Here's to celebrating you today and always.</p>
+            <button id="exploreBtn" class="cta-button">Start the Celebration</button>
+        </div>
+        <div class="hearts"></div>
+    </section>
 
-<section id="services" class="services">
-   <h2 class="section-title">My Service</h2>
-    <div class="service-grid">
-      <div class="service">
-        <img src="SEO.webp" alt="SEO content writing">
-        <p>SEO content writing</p>
-      </div>
-      <div class="service">
-        <img src="Web.webp" alt="Web designing">
-        <p>Web designing</p>
-      </div>
-      <div class="service">
-        <img src="First.jpg" alt="Page Ranking">
-        <p>Page Ranking</p>
-      </div>
-      <div class="service">
-        <img src="SERPS.webp" alt="SERPS">
-        <p>SERPS</p>
-      </div>
-    </div>
-  </section>
-<section id="portfolio" class="portfolio-section">
-  <h2 class="section-title">My Portfolio</h2>
-  <div class="portfolio-grid">
-    <div class="portfolio-item">
-      <h3>SEO Tips For Beginer</h3>
-      <p>A responsive, animated site built with HTML, CSS, and JS.</p>
-           <button onclick="window.location.href='project.html'">View Project</button>
-    </div>
-    <div class="portfolio-item">
-      <h3>SEO in Digital Marketing</h3>
-      <p>Online shopping site with cart, payment, and product filters.</p>
-            <button onclick="window.location.href='portfolio-article.html'">View Project</button>
-    </div>
-    <div class="portfolio-item">
-      <h3>Factors Influence SEO and Important?</h3>
-      <p>Full-stack blog with admin panel and Markdown support.</p>
-      <button onclick="window.location.href='tips.html'">View Project</button>
-    </div>
-    <div class="portfolio-item">
-      <h3>Top Amazon product</h3>
-      <p> Enhance your Apple experience with top Amazon products</p>
-      <button onclick="window.location.href='amazon.html'">View Project</button>
-    </div>
-  </div>
-</section>
+    <!-- Timeline Section -->
+    <section id="timeline" class="timeline">
+        <h2>Our Journey Together</h2>
+        <div class="timeline-container">
+            <!-- Timeline items will be added by JavaScript -->
+        </div>
+    </section>
 
-<footer id="contact">
-    <div class="info">
-      <h3>My information</h3>
-      <p>Email: rijanbhattarai03@gmail.com</p>
-      <p>Number: 9842621833</p>
-      <p>Location: kathmandu, Nepal</p>
-    </div>
-    <div class="contact">
-      
-      <form action="https://formspree.io/f/meooooje" method="POST">
-  <label for="name">Name:</label><br>
-  <input type="text" id="name" name="name" required><br><br>
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <h2>Beautiful Memories</h2>
+        <div class="gallery-container">
+            <!-- Gallery items will be added by JavaScript -->
+        </div>
+    </section>
 
-  <label for="email">Email:</label><br>
-  <input type="email" id="email" name="email" required><br><br>
+    <!-- Messages Section -->
+    <section id="messages" class="messages">
+        <h2>Special Messages</h2>
+        <div class="message-container">
+            <div class="message-card" data-message="You light up my world every single day. Happy Birthday, my love!">
+                <div class="message-content">
+                    <i class="fas fa-heart"></i>
+                    <p>Click to reveal a message</p>
+                </div>
+            </div>
+            <!-- More message cards will be added by JavaScript -->
+        </div>
+    </section>
 
-  <label for="message">Message:</label><br>
-  <textarea id="message" name="message" rows="5" required></textarea><br><br>
+    <!-- Countdown Section -->
+    <section id="countdown" class="countdown">
+        <h2>Time Until Your Special Day</h2>
+        <div class="countdown-container">
+            <div class="countdown-item">
+                <span id="days">00</span>
+                <span>Days</span>
+            </div>
+            <div class="countdown-item">
+                <span id="hours">00</span>
+                <span>Hours</span>
+            </div>
+            <div class="countdown-item">
+                <span id="minutes">00</span>
+                <span>Minutes</span>
+            </div>
+            <div class="countdown-item">
+                <span id="seconds">00</span>
+                <span>Seconds</span>
+            </div>
+        </div>
+    </section>
 
-  <button type="submit">Send Message</button>
-      </form>
-    </div>
-  </footer>
- <script>
-  window.addEventListener('scroll', () => {
-    const heroText = document.getElementById('heroText');
-    const scrollY = window.scrollY;
-    const fadeOutStart = 0;
-    const fadeOutEnd = 250;
+    <!-- Game Section -->
+    <section id="game" class="game">
+        <h2>Let's Play a Game!</h2>
+        <div class="game-container">
+            <div id="heart-catcher">
+                <div id="basket">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <div id="score">Score: 0</div>
+            </div>
+        </div>
+    </section>
 
-    let opacity = 1;
-    let scale = 1;
+    <!-- Final Surprise -->
+    <section id="surprise" class="surprise">
+        <div class="surprise-content">
+            <h2>Happy Birthday!</h2>
+            <p>You've reached the end of this little celebration!</p>
+            <button id="surpriseBtn" class="cta-button">Click for a Special Surprise</button>
+        </div>
+    </section>
 
-    if (scrollY <= fadeOutStart) {
-      opacity = 1;
-      scale = 1;
-    } else if (scrollY >= fadeOutEnd) {
-      opacity = 0;
-      scale = 0.8; // Fully zoomed out
-    } else {
-      const progress = (scrollY - fadeOutStart) / (fadeOutEnd - fadeOutStart);
-      opacity = 1 - progress;
-      scale = 1 - (0.2 * progress); // Shrinks from 1 to 0.8
-    }
+    <!-- Wish Me Section -->
+    <section id="wish-me" class="wish-me">
+        <div class="wish-container">
+            <h2>Wish Me!</h2>
+            <p>Click below to call and share your birthday wishes directly with me!</p>
+            <div class="wish-buttons">
+                <a href="tel:+9779800000000" class="cta-button wish-button">
+                    <i class="fas fa-phone"></i> Call to Wish Me
+                </a>
+                <a href="wish.html" class="cta-button wish-button magic-button">
+                    <i class="fas fa-magic"></i> Make a Magical Wish
+                </a>
+            </div>
+        </div>
+    </section>
 
-    heroText.style.opacity = opacity;
-    heroText.style.transform = `scale(${scale})`;
-  });
-</script>
-<script>
-  document.querySelectorAll('nav a').forEach(link => {
-    link.addEventListener('click', function(e) {
-      e.preventDefault();
-      const target = document.querySelector(this.getAttribute('href'));
-      const headerOffset = 80; // Adjust to match your header height
-      const elementPosition = target.offsetTop;
-      const offsetPosition = elementPosition - headerOffset;
+    <!-- Confetti Container -->
+    <div id="confetti-container"></div>
 
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth"
-      });
-    });
-  });
-  document.querySelector('.logo').addEventListener('click', () => {
-    location.reload();
-  });
-</script>
- <!-- Place just before </body> -->
-<script>
-  function toggleMenu() {
-    const nav = document.querySelector('.nav-links');
-    nav.classList.toggle('active');
-  }
-
-  document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', () => {
-      document.querySelector('.nav-links').classList.remove('active');
-    });
-  });
-</script>
-
+    <script src="script.js"></script>
 </body>
 </html>
