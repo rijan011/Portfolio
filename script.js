@@ -247,11 +247,12 @@ document.addEventListener('DOMContentLoaded', function() {
     function initGallery() {
         const galleryContainer = document.querySelector('.gallery-container');
         
-        // Personal gallery images (1.jpg to 26.jpg, with 17th image as 37.jpg)
+        // Personal gallery images (2-26.jpg, skipping 1 and 17, with 17th image as 37.jpg)
         const galleryData = [];
-        for (let i = 1; i <= 26; i++) {
+        for (let i = 2; i <= 26; i++) {  // Start from 2 to skip the first image
+            if (i === 17) continue;  // Skip the 17th image
             galleryData.push({
-                src: i === 17 ? '37.jpg' : `${i}.jpg`,
+                src: `${i}.jpg`,
                 alt: `Our Special Moment ${i}`
             });
         }
