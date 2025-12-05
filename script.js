@@ -247,11 +247,11 @@ document.addEventListener('DOMContentLoaded', function() {
     function initGallery() {
         const galleryContainer = document.querySelector('.gallery-container');
         
-        // Personal gallery images (1.jpg to 26.jpg)
+        // Personal gallery images (1.jpg to 26.jpg, with 17th image as 37.jpg)
         const galleryData = [];
         for (let i = 1; i <= 26; i++) {
             galleryData.push({
-                src: `${i}.jpg`,
+                src: i === 17 ? '37.jpg' : `${i}.jpg`,
                 alt: `Our Special Moment ${i}`
             });
         }
